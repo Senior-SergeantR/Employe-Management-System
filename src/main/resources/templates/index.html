@@ -6,93 +6,102 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+
+        css
+        /* Base styles for body /
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #121212; /* Dark background */
-            color: #F5F5F5;
-            margin: 0;
-            padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa; / Light background for better contrast /
+        color: #343a40; / Dark gray text for readability /
+        margin: 0;
+        padding: 20px; / Add some padding around the body */
         }
+        /* Container style /
         .container {
-            margin-top: 2rem;
-            padding: 2rem;
-            background-color: #1E1E1E; /* Card-like container */
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        max-width: 1200px; / Limit the width of the container /
+        margin: auto; / Center the container /
+        padding: 20px;
+        background: white; / White background for card-like appearance /
+        border-radius: 10px; / Rounded corners /
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); / Subtle shadow for depth */
         }
+        /* Heading style /
         h2 {
-            text-align: center;
-            color: #64FFDA; /* Teal highlight for headers */
-            margin-bottom: 2rem;
+        text-align: center; / Center the heading /
+        margin-bottom: 20px; / Space below the heading /
+        color: #007bff; / Primary color for emphasis */
         }
-        .btn-primary {
-            background-color: #64FFDA;
-            border: none;
-            font-weight: 500;
-            color: #121212;
-            padding: 0.7rem 1.5rem;
-            border-radius: 6px;
-            transition: all 0.3s ease;
+        /* Button styles /
+        .btn {
+        background-color: #007bff; / Bootstrap primary color /
+        color: white;
+        border: none;
+        border-radius: 5px; / Rounded button corners /
+        padding: 10px 20px; / Padding around button text */
         }
-        .btn-primary:hover {
-            background-color: #18FFFF;
-            box-shadow: 0 4px 15px rgba(24, 255, 255, 0.3);
+        .btn:hover {
+        background-color: #0056b3; /* Darker shade on hover */
         }
-        table {
-            width: 100%;
-            margin-top: 1rem;
-            border-collapse: collapse;
-            color: #F5F5F5;
+        /* Table styles /
+        .table {
+        width: 100%;
+        margin-top: 20px; / Space above the table /
+        border-collapse: collapse; / Merge borders */
         }
-        thead {
-            background-color: #2C2C2C;
+        .table-dark {
+        background-color: #343a40; /* Dark background for table /
+        color: white; / White text for contrast */
         }
-        th {
-            padding: 1rem;
-            text-align: left;
-            cursor: pointer;
-            color: #64FFDA;
+        .table th, .table td {
+        padding: 15px; /* Padding inside table cells /
+        text-align: left; / Align text to the left /
+        border-bottom: 1px solid #495057; / Bottom border for cells */
         }
-        th:hover {
-            color: #18FFFF;
+        .table th {
+        cursor: pointer; /* Pointer cursor on header /
+        background-color: #495057; / Darker header background */
         }
-        tbody tr {
-            border-bottom: 1px solid #383838;
+        .table tr:hover {
+        background-color: #495057; /* Highlight row on hover */
         }
-        td {
-            padding: 1rem;
-            color: #E0E0E0;
-        }
-        a {
-            color: #64FFDA;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #18FFFF;
-        }
+        /* Pagination styles /
         .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 2rem;
+        display: flex;
+        justify-content: center; / Center the pagination /
+        margin-top: 20px; / Space above pagination */
         }
         .pagination .page-link {
-            background-color: #2C2C2C;
-            border: 1px solid #64FFDA;
-            color: #64FFDA;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            margin: 0 0.3rem;
-            transition: all 0.3s;
+        padding: 10px 15px; /* Padding for pagination links /
+        margin: 0 5px; / Space between page links /
+        color: #007bff; / Link color /
+        border: 1px solid #007bff; / Border for links /
+        border-radius: 5px; / Rounded corners */
+        }
+        .pagination .page-link.active {
+        background-color: #007bff; /* Active page background /
+        color: white; / White text for active page /
+        border: none; / Remove border for active page */
         }
         .pagination .page-link:hover {
-            background-color: #18FFFF;
-            color: #121212;
+        background-color: #0056b3; /* Darker background on hover /
+        color: white; / White text on hover */
         }
-        .pagination .active .page-link {
-            background-color: #64FFDA;
-            color: #121212;
+        /* Responsive adjustments /
+        @media (max-width: 768px) {
+        .container {
+        padding: 10px; / Smaller padding on mobile devices */
         }
+        h2 {
+        font-size: 24px; /* Smaller heading on mobile */
+        }
+        .table th, .table td {
+        padding: 10px; /* Smaller padding in table on mobile */
+        }
+        .pagination .page-link {
+        padding: 8px 10px; /* Smaller padding for pagination on mobile */
+        }
+        }
+
     </style>
 </head>
 <body>

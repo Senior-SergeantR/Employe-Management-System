@@ -1,5 +1,6 @@
-package com.java.EmployeeMangement;
+package com.java.EmployeeMangement.Service;
 
+import com.java.EmployeeMangement.Model.EmployeeEntity;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

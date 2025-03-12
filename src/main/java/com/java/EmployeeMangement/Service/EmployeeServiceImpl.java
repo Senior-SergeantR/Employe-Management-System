@@ -1,5 +1,8 @@
-package com.java.EmployeeMangement;
+package com.java.EmployeeMangement.Service;
 
+import com.java.EmployeeMangement.Model.EmployeeEntity;
+import com.java.EmployeeMangement.Repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -12,13 +15,14 @@ import java.util.Optional;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
+    @Autowired
     private final EmployeeRepository employeeRepository;
 
     private EmployeeServiceImpl(EmployeeRepository employeeRepository){
         this.employeeRepository=employeeRepository;
     }
 
-
+    @Override
     public List<EmployeeEntity> getAllEmployees(){
         return employeeRepository.findAll();
     }

@@ -1,8 +1,7 @@
-package com.java.EmployeeMangement;
+package com.java.EmployeeMangement.Model;
 
 import jakarta.persistence.*;
 import java.util.Collection;
-import java.util.List;
 
 @Entity
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))

@@ -1,4 +1,4 @@
-package com.java.EmployeeMangement;
+package com.java.EmployeeMangement.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.java.EmployeeMangement.UserRegistrationDto;
-import com.java.EmployeeMangement.UserService;
+import com.java.EmployeeMangement.Service.UserService;
 
 @Controller
 @RequestMapping("/registration")

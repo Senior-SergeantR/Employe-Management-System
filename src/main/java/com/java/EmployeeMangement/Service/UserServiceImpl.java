@@ -1,8 +1,12 @@
-package com.java.EmployeeMangement;
+package com.java.EmployeeMangement.Service;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
+
+import com.java.EmployeeMangement.Model.UserEntity;
+import com.java.EmployeeMangement.Model.UserRepository;
+import com.java.EmployeeMangement.UserRegistrationDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,17 +15,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import com.java.EmployeeMangement.UserRegistrationDto;
-import com.java.EmployeeMangement.RoleEntity;
-import com.java.EmployeeMangement.UserEntity;
-import com.java.EmployeeMangement.UserRepository;
+import com.java.EmployeeMangement.Model.RoleEntity;
 
 @Service
 public class UserServiceImpl implements UserService {
-
+    @Lazy
+    @Autowired
     private UserRepository userRepository;
 
-    @Lazy
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 

@@ -3,113 +3,121 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Employee Management System</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <!-- Latest Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-Qm5XtI9S7yx5BLl2aPRpM1QlMP6nMkKxj6Kwryyb6zFfH25qlUdxqhF7inTocAaM" crossorigin="anonymous">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-
-        css
-        /* Base styles for body /
+        /* Global Styling */
         body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #f8f9fa; / Light background for better contrast /
-        color: #343a40; / Dark gray text for readability /
-        margin: 0;
-        padding: 20px; / Add some padding around the body */
-        }
-        /* Container style /
-        .container {
-        max-width: 1200px; / Limit the width of the container /
-        margin: auto; / Center the container /
-        padding: 20px;
-        background: white; / White background for card-like appearance /
-        border-radius: 10px; / Rounded corners /
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); / Subtle shadow for depth */
-        }
-        /* Heading style /
-        h2 {
-        text-align: center; / Center the heading /
-        margin-bottom: 20px; / Space below the heading /
-        color: #007bff; / Primary color for emphasis */
-        }
-        /* Button styles /
-        .btn {
-        background-color: #007bff; / Bootstrap primary color /
-        color: white;
-        border: none;
-        border-radius: 5px; / Rounded button corners /
-        padding: 10px 20px; / Padding around button text */
-        }
-        .btn:hover {
-        background-color: #0056b3; /* Darker shade on hover */
-        }
-        /* Table styles /
-        .table {
-        width: 100%;
-        margin-top: 20px; / Space above the table /
-        border-collapse: collapse; / Merge borders */
-        }
-        .table-dark {
-        background-color: #343a40; /* Dark background for table /
-        color: white; / White text for contrast */
-        }
-        .table th, .table td {
-        padding: 15px; /* Padding inside table cells /
-        text-align: left; / Align text to the left /
-        border-bottom: 1px solid #495057; / Bottom border for cells */
-        }
-        .table th {
-        cursor: pointer; /* Pointer cursor on header /
-        background-color: #495057; / Darker header background */
-        }
-        .table tr:hover {
-        background-color: #495057; /* Highlight row on hover */
-        }
-        /* Pagination styles /
-        .pagination {
-        display: flex;
-        justify-content: center; / Center the pagination /
-        margin-top: 20px; / Space above pagination */
-        }
-        .pagination .page-link {
-        padding: 10px 15px; /* Padding for pagination links /
-        margin: 0 5px; / Space between page links /
-        color: #007bff; / Link color /
-        border: 1px solid #007bff; / Border for links /
-        border-radius: 5px; / Rounded corners */
-        }
-        .pagination .page-link.active {
-        background-color: #007bff; /* Active page background /
-        color: white; / White text for active page /
-        border: none; / Remove border for active page */
-        }
-        .pagination .page-link:hover {
-        background-color: #0056b3; /* Darker background on hover /
-        color: white; / White text on hover */
-        }
-        /* Responsive adjustments /
-        @media (max-width: 768px) {
-        .container {
-        padding: 10px; / Smaller padding on mobile devices */
-        }
-        h2 {
-        font-size: 24px; /* Smaller heading on mobile */
-        }
-        .table th, .table td {
-        padding: 10px; /* Smaller padding in table on mobile */
-        }
-        .pagination .page-link {
-        padding: 8px 10px; /* Smaller padding for pagination on mobile */
-        }
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #e9f5ff, #ddeaf2);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
+        .container {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4a4a8c;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4a4a8c, #6a5acd);
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-bottom: 50px; /* Increased space below the button */
+            padding: 10px 20px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #6a5acd, #4a4a8c);
+            transform: translateY(-2px);
+        }
+
+        table {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table thead {
+            background-color: #4a4a8c;
+            color: white;
+            font-weight: 600;
+        }
+
+        table thead th {
+            padding: 15px;
+            text-align: center;
+        }
+
+        table tbody tr {
+            text-align: center;
+        }
+
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        table tbody td {
+            padding: 15px;
+        }
+
+        .actions a {
+            margin: 0 5px;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .actions a:hover {
+            text-decoration: underline;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .pagination .page-link {
+            color: #4a4a8c;
+            font-weight: 600;
+        }
+
+        .pagination .page-link:hover {
+            background-color: #4a4a8c;
+            color: white;
+        }
+
+        .pagination .active .page-link {
+            background-color: #4a4a8c;
+            color: white;
+            border-color: #4a4a8c;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <h2>Employee Management System</h2>
     <div th:if="${employees != null}">
-        <a class="btn btn-primary mb-3" th:href="@{/showNewEmployeeForm}">Add Employee</a>
-        <table class="table table-dark">
+        <a class="btn btn-primary" th:href="@{/showNewEmployeeForm}">Add Employee</a>
+        <table class="table table-bordered table-hover table-striped">
             <thead>
             <tr>
                 <th th:click="|@{/page/1(sortField='firstName',sortDir=${reverseSortDir})}|">First Name</th>
@@ -123,9 +131,9 @@
                 <td th:text="${employee.firstName}">First Name</td>
                 <td th:text="${employee.lastName}">Last Name</td>
                 <td th:text="${employee.email}">Email</td>
-                <td>
-                    <a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}">Edit</a> |
-                    <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}">Delete</a>
+                <td class="actions">
+                    <a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="text-primary">Edit</a>
+                    <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="text-danger">Delete</a>
                 </td>
             </tr>
             </tbody>
@@ -146,5 +154,6 @@
         </ul>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+uamGk5Ic6UCLaO8yzu8oB8Am1Ek" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,28 +1,99 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="ISO-8859-1">
-  <title>Employee Management System</title>
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+  <title>Update Employee</title>
+  <!-- Latest Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha384-Qm5XtI9S7yx5BLl2aPRpM1QlMP6nMkKxj6Kwryyb6zFfH25qlUdxqhF7inTocAaM" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styling */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #e0eafc, #cfdef3);
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        color: #4a4a8c;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    label {
+        font-weight: 500;
+        color: #555;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        padding: 12px;
+        border: 2px solid #d8e3f8;
+        border-radius: 8px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 20px;
+    }
+
+    .form-control:focus {
+        border-color: #4a4a8c;
+        box-shadow: 0 0 8px rgba(74, 74, 140, 0.25);
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #4a4a8c, #6a5acd);
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        transition: background 0.3s ease, transform 0.2s ease;
+        width: 100%;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #6a5acd, #4a4a8c);
+        transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
 <div class="container">
   <h2>Update Employee</h2>
   <form th:action="@{/saveEmployee}" th:object="${employee}" method="post">
     <div class="form-group">
-      <label>First Name</label>
-      <input type="text" class="form-control" th:field="*{firstName}" placeholder="First Name"/>
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" th:field="*{firstName}" placeholder="Enter First Name" id="firstName" required/>
     </div>
     <div class="form-group">
-      <label>Last Name</label>
-      <input type="text" class="form-control" th:field="*{lastName}" placeholder="Last Name"/>
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" th:field="*{lastName}" placeholder="Enter Last Name" id="lastName" required/>
     </div>
     <div class="form-group">
-      <label>Email</label>
-      <input type="email" class="form-control" th:field="*{email}" placeholder="Email"/>
+      <label for="email">Email</label>
+      <input type="email" class="form-control" th:field="*{email}" placeholder="Enter Email Address" id="email" required/>
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+uamGk5Ic6UCLaO8yzu8oB8Am1Ek" crossorigin="anonymous"></script>
 </body>
 </html>
